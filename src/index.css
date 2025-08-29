@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Dark Blue Gaming Theme */
+  --primary: 200 100% 15%;   
+  --primary-foreground: 45 100% 85%;
+  --secondary: 45 100% 55%;
+  --secondary-foreground: 200 50% 10%;
+  --accent: 45 100% 60%;
+  --accent-foreground: 200 50% 10%;
+  
+  /* System Colors */
+  --success: 142 72% 29%;
+  --success-foreground: 210 40% 98%;
+  --success-muted: 142 72% 90%;
+
+  --warning: 38 92% 50%;
+  --warning-foreground: 48 96% 98%;
+  --warning-muted: 38 92% 90%;
+
+  --error: 0 84% 60%;
+  --error-foreground: 210 40% 98%;
+  --error-muted: 0 84% 90%;
+
+  --info: 185 100% 50%;
+  --info-foreground: 0 0% 0%;
+  --info-muted: 185 100% 90%;
+  
+  /* Surface Colors */
+  --surface: 200 20% 95%;
+  --surface-foreground: 200 50% 10%;
+  --surface-muted: 200 20% 90%;
+
+  --background: 200 20% 98%;
+  --foreground: 200 50% 10%;
+
+  --card: 200 20% 95%;
+  --card-foreground: 200 50% 10%;
+
+  --popover: 200 20% 95%;
+  --popover-foreground: 200 50% 10%;
+
+  --muted: 200 20% 90%;
+  --muted-foreground: 200 30% 45%;
+
+  /* Primary Scale */
+  --primary-50: 200 100% 98%;
+  --primary-100: 200 100% 94%;
+  --primary-200: 200 95% 85%;
+  --primary-300: 200 90% 70%;
+  --primary-400: 200 85% 50%;
+  --primary-500: 200 100% 15%;
+  --primary-600: 200 100% 12%;
+  --primary-700: 200 100% 10%;
+  --primary-800: 200 100% 8%;
+  --primary-900: 200 100% 6%;
+  
+  /* Secondary Scale - Gold */
+  --secondary-50: 45 100% 95%;
+  --secondary-100: 45 100% 90%;
+  --secondary-200: 45 95% 80%;
+  --secondary-300: 45 90% 70%;
+  --secondary-400: 45 85% 60%;
+  --secondary-500: 45 100% 55%;
+  --secondary-600: 45 90% 45%;
+  --secondary-700: 45 80% 35%;
+  --secondary-800: 45 70% 25%;
+  --secondary-900: 45 60% 15%;
+  
+  /* Accent Scale - Bright Gold */
+  --accent-50: 45 100% 97%;
+  --accent-100: 45 100% 92%;
+  --accent-200: 45 100% 85%;
+  --accent-300: 45 100% 75%;
+  --accent-400: 45 100% 65%;
+  --accent-500: 45 100% 60%;
+  --accent-600: 45 90% 50%;
+  --accent-700: 45 85% 40%;
+  --accent-800: 45 80% 30%;
+  --accent-900: 45 75% 20%;
+  
+  /* System Variables */
+  --border: 200 30% 85%;
+  --input: var(--border);
+  --ring: var(--primary);
+}
+
+.dark {
+  /* Dark Mode - Gaming Theme */
+  --background: 200 50% 4%;
+  --foreground: 45 100% 90%;
+
+  --card: 200 50% 6%;
+  --card-foreground: 45 100% 90%;
+
+  --popover: 200 50% 6%;
+  --popover-foreground: 45 100% 90%;
+
+  --primary: 200 100% 20%;
+  --primary-foreground: 45 100% 90%;
+
+  --secondary: 45 100% 60%;
+  --secondary-foreground: 200 50% 10%;
+
+  --muted: 200 40% 12%;
+  --muted-foreground: 200 30% 70%;
+
+  --accent: 45 100% 65%;
+  --accent-foreground: 200 50% 10%;
+
+  --surface: 200 50% 8%;
+  --surface-foreground: 45 100% 90%;
+  --surface-muted: 200 40% 15%;
+
+  --border: 200 40% 18%;
+  --input: 200 40% 18%;
+  --ring: 45 100% 60%;
+  
+  /* Dark Mode System Colors */
+  --success: 142 72% 50%;
+  --warning: 38 92% 60%;
+  --error: 0 84% 70%;
+  --info: 185 100% 60%;
+}
+
+/* Gaming Components */
+.hero-section {
+  @apply relative min-h-screen bg-gradient-to-br from-primary-900 to-primary-800 overflow-hidden;
+}
+
+.champion-card {
+  @apply bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:border-accent hover:shadow-lg;
+}
+
+.champion-card:hover {
+  @apply transform -translate-y-1;
+  box-shadow: 0 10px 25px hsl(var(--accent) / 0.2);
+}
+
+.game-mode-card {
+  @apply bg-surface border border-border rounded-xl p-8 transition-all duration-300 hover:bg-surface-muted;
+}
+
+.esports-highlight {
+  @apply bg-gradient-to-r from-accent-900 to-accent-800 text-accent-foreground rounded-lg p-6;
+}
+
+.news-card {
+  @apply bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-accent;
+}
+
+.cta-button {
+  @apply bg-accent text-accent-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-accent-600 hover:shadow-lg;
+}
+
+.nav-link {
+  @apply text-foreground hover:text-accent transition-colors duration-200;
+}
+
+.tournament-badge {
+  @apply bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-semibold;
+}
+
+.patch-note {
+  @apply bg-muted border-l-4 border-accent p-4 rounded-r-lg;
+}
+
+.leaderboard-row {
+  @apply bg-surface border border-border rounded-lg p-4 transition-all duration-200 hover:bg-surface-muted;
+}
+
+.community-stat {
+  @apply text-center p-6 bg-card border border-border rounded-lg;
+}
+
+/* Animations */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glow-effect {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px hsl(var(--accent) / 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.8), 0 0 30px hsl(var(--accent) / 0.6);
+  }
+}
+
+/* Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent-600));
+}
